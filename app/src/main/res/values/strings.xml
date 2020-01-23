@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Pichangas</string>
+    <string name="user">Usuario</string>
+    <string name="pass">Password</string>
+    <string name="correo">Correo</string>
+    <string name="iniciar">Iniciar</string>
+    <string name="registrar">Registrar</string>
+    <string name="registroUser">Registro de Usuario</string>
+    <string name="nombre">Nombre</string>
+    <string name="age">Edad</string>
+    <string name="bienvenido">Bienvenido!</string>
+    <string name="nombreUser">Nombre:</string>
+    <string name="edadUser">Edad:</string>
+    <string name="usuarioUser">Usuario:</string>
+    <string name="passUser">Contraseña:</string>
+    <string name="correoUser">Correo:</string>
+</resources>
