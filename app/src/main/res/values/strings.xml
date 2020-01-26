@@ -19,4 +19,7 @@
     <string name="amigos">Amigos</string>
     <string name="invitaciones">Invitaciones</string>
     <string name="estadisticas">Estadísticas</string>
+
+    <string name="returnDescription">Volver al menú principal</string>
+    <string name="userDescription">Ver mi perfil</string>
 </resources>

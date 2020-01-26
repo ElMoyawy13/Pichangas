@@ -20,11 +20,11 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView tv_registrar;
     EditText et_usuario;
     EditText et_password;
     EditText et_correo;
     Button btn_log;
+    Button tv_registrar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
