@@ -14,4 +14,9 @@
     <string name="usuarioUser">Usuario:</string>
     <string name="passUser">Contraseña:</string>
     <string name="correoUser">Correo:</string>
+
+    <string name="pichangas">Pichangas</string>
+    <string name="amigos">Amigos</string>
+    <string name="invitaciones">Invitaciones</string>
+    <string name="estadisticas">Estadísticas</string>
 </resources>

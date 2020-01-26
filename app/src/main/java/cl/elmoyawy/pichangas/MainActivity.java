@@ -60,34 +60,21 @@ public class MainActivity extends AppCompatActivity {
                             JSONObject jsonOResponse = new JSONObject(response);
                             boolean success = jsonOResponse.getBoolean("success");
                             if (success){
+                                String name = jsonOResponse.getString("name");
+                                int edad = jsonOResponse.getInt("age");
                                 if(jsonOResponse.getString("username") == username) {
-                                    String name = jsonOResponse.getString("name");
-                                    int edad = jsonOResponse.getInt("age");
                                     String correo = jsonOResponse.getString("correo");
-
-                                    Intent intent = new Intent(MainActivity.this, Usuario.class);
-                                    intent.putExtra("name", name);
-                                    intent.putExtra("username", username);
-                                    intent.putExtra("age", edad);
-                                    intent.putExtra("correo", correo);
-                                    intent.putExtra("password", password);
-
-                                    MainActivity.this.startActivity(intent);
-
                                 }else {
-                                    String name = jsonOResponse.getString("name");
-                                    int edad = jsonOResponse.getInt("age");
                                     String username = jsonOResponse.getString("username");
-
-                                    Intent intent = new Intent(MainActivity.this, Usuario.class);
-                                    intent.putExtra("name", name);
-                                    intent.putExtra("username", username);
-                                    intent.putExtra("age", edad);
-                                    intent.putExtra("correo", correo);
-                                    intent.putExtra("password", password);
-
-                                    MainActivity.this.startActivity(intent);
                                 }
+                                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+                                intent.putExtra("name", name);
+                                intent.putExtra("username", username);
+                                intent.putExtra("age", edad);
+                                intent.putExtra("correo", correo);
+                                intent.putExtra("password", password);
+
+                                MainActivity.this.startActivity(intent);
 
                             }else{
                                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorFondo"
+    tools:context=".MainActivity">
+
+    <ImageView
+
+        android:layout_height="72dp"
+        android:layout_width="72dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_account_circle_black_24dp" />
+
+
+    <ImageView
+
+        android:layout_width="wrap_content"
+        android:layout_height="241dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/logoo" />
+
+
+
+    <Button
+        android:id="@+id/btn_pichangas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pichangas"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_gravity="center"
+        android:background="@drawable/secondary_button"
+        android:textColor="@color/colorBlanco"
+        />
+
+    <Button
+        android:id="@+id/btn_amigos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/amigos"
+        android:textColor="@color/colorBlanco"
+        android:background="@drawable/secondary_button"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_gravity="center"
+        />
+
+    <Button
+        android:id="@+id/btn_invitaciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/invitaciones"
+        android:textColor="@color/colorBlanco"
+        android:background="@drawable/secondary_button"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_gravity="center"
+        />
+
+    <Button
+        android:id="@+id/btn_estadisticas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/estadisticas"
+        android:textColor="@color/colorBlanco"
+        android:background="@drawable/secondary_button"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>

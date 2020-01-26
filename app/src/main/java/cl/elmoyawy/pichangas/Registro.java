@@ -17,6 +17,8 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.widget.Toast;
+
 public class Registro extends AppCompatActivity implements View.OnClickListener {
     EditText etnombre, etusuario, etpassword, etedad, etcorreo;
     Button btn_registrar;
@@ -40,10 +42,35 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
     public void onClick(View v) {
 
         final String name = etnombre.getText().toString();
+        if(name.equals("")) {
+            Toast.makeText(this, (String)"Debes ingresar un nombre",
+                    Toast.LENGTH_LONG).show();
+            return;
+        }
         final String username = etusuario.getText().toString();
+        if(username.equals("")) {
+            Toast.makeText(this, (String)"Debes ingresar un nombre de usuario",
+                    Toast.LENGTH_LONG).show();
+            return;
+        }
         final String password = etpassword.getText().toString();
+        if(password.equals("")) {
+            Toast.makeText(this, (String)"Debes ingresar una contraseña",
+                    Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(etedad.getText().toString().equals("")) {
+            Toast.makeText(this, (String)"Debes ingresar una edad",
+                    Toast.LENGTH_LONG).show();
+            return;
+        }
         final int age = Integer.parseInt(etedad.getText().toString());
         final String correo = etcorreo.getText().toString();
+        if(correo.equals("")) {
+            Toast.makeText(this, (String)"Debes ingresar un correo",
+                    Toast.LENGTH_LONG).show();
+            return;
+        }
         Response.Listener<String> respoListener = new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -70,6 +97,9 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         RegisterRequest registerRequest = new RegisterRequest(name, username, age, password, correo, respoListener);
         RequestQueue queue = Volley.newRequestQueue(Registro.this);
         queue.add(registerRequest);
+
+        Toast.makeText(this, (String)"Registrándote...",
+                Toast.LENGTH_LONG).show();
 
     }
 }
