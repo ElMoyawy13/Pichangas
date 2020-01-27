@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorFondo"
-    tools:context=".MainActivity">
+    tools:context=".MenuActivity">
 
     <ImageView
 
+        android:id="@+id/btn_perfil"
         android:layout_height="72dp"
         android:layout_width="72dp"
         android:layout_gravity="right"

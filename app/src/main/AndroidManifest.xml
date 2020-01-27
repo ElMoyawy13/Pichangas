@@ -21,6 +21,10 @@
         </activity>
         <activity android:name=".MenuActivity" />
         <activity android:name=".PichangasActivity" />
+        <activity android:name=".AmigosActivity"/>
+        <activity android:name=".EstadisticasActivity"/>
+        <activity android:name=".InvitacionesActivity"/>
+        <activity android:name=".PerfilActivity"/>
     </application>
 
 </manifest>

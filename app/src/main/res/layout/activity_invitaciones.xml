@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorFondo"
+    tools:context=".MenuActivity">
+
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorFondo">
+
+        <ImageView
+            android:contentDescription="@string/returnDescription"
+            android:layout_height="72dp"
+            android:layout_width="72dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <LinearLayout
+            android:layout_height="72dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:contentDescription="@string/userDescription"
+            android:layout_gravity="end"
+            android:layout_height="72dp"
+            android:layout_width="72dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_account_circle_black_24dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_pichangas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/navbar"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+
+</RelativeLayout>
