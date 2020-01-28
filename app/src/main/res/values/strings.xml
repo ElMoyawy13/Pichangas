@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Pichangas</string>
     <string name="user">Usuario</string>
-    <string name="pass">Password</string>
+    <string name="pass">Contraseña</string>
     <string name="correo">Correo</string>
     <string name="iniciar">Iniciar</string>
     <string name="registrar">Registrar</string>
@@ -13,11 +13,12 @@
     <string name="edadUser">Edad:</string>
     <string name="usuarioUser">Usuario:</string>
     <string name="passUser">Contraseña:</string>
-    <string name="pass_confirmation">Confirme ontraseña</string>
+    <string name="pass_confirmation">Confirme ontraseña:</string>
     <string name="correoUser">Correo:</string>
     <string name="old_pass">Contraseña actual</string>
     <string name="new_pass">Nueva contraseña</string>
     <string name="new_pass_confirmation">Confirmar contraseña</string>
+    <string name="perfil_update">Actualizar datos</string>
 
     <string name="pichangas">Pichangas</string>
     <string name="amigos">Amigos</string>
@@ -28,4 +29,5 @@
     <string name="userDescription">Ver mi perfil</string>
     <string name="nuevaPichanga">Nueva Pichanga</string>
     <string name="description">Descripción</string>
+    <string name="addPichanga">Crear Pichanga</string>
 </resources>

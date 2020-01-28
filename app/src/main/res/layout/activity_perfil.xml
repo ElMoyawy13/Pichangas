@@ -47,6 +47,7 @@
             android:layout_gravity="center"
             android:background="@drawable/third_button"
             android:textColor="@color/colorBlanco"
+            android:hint="@string/nombreUser"
             />
 
         <EditText
@@ -62,6 +63,7 @@
             android:layout_gravity="center"
             android:background="@drawable/third_button"
             android:textColor="@color/colorBlanco"
+            android:hint="@string/correoUser"
             />
         <EditText
             android:id="@+id/txt_edad"
@@ -76,6 +78,7 @@
             android:layout_gravity="center"
             android:background="@drawable/third_button"
             android:textColor="@color/colorBlanco"
+            android:hint="@string/edadUser"
             />
 
         <EditText
@@ -108,7 +111,7 @@
             android:textColor="@color/colorBlanco"
             android:hint="@string/new_pass"
             />
-        <TextView
+        <EditText
             android:id="@+id/new_pass_confirmation"
             android:inputType="textPassword"
             android:layout_width="match_parent"
@@ -124,6 +127,16 @@
             android:hint="@string/new_pass_confirmation"
             />
 
+        <Button
+            android:id="@+id/perfil_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/perfil_update"
+            android:textColor="@color/colorBlanco"
+            android:layout_gravity="center"
+            android:background="@drawable/secondary_button"
+            />
 
     </LinearLayout>
 
