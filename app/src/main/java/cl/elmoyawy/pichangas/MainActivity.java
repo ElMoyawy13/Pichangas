@@ -4,9 +4,11 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -18,6 +20,9 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText et_usuario;
@@ -25,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
     EditText et_correo;
     Button btn_log;
     Button tv_registrar;
+
+    List datos_user = new ArrayList();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +82,11 @@ public class MainActivity extends AppCompatActivity {
                                 intent.putExtra("correo", correo);
                                 intent.putExtra("password", password);
 
+                                datos_user.add(name);
+                                datos_user.add(correo);
+                                datos_user.add(edad);
+
+
                                 MainActivity.this.startActivity(intent);
 
                             }else{
@@ -94,5 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
     }
 }

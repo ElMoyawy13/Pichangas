@@ -1,43 +1,32 @@
 package cl.elmoyawy.pichangas;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageView;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.sql.Array;
+
 public class PerfilActivity extends AppCompatActivity {
-    EditText tvNombre, tvEdad, tvCorreo;
-    ImageView back_button;
+    TextView tvNombre, tvEdad, tvCorreo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
 
-        tvNombre = findViewById(R.id.txt_nombre);
-        tvEdad = findViewById(R.id.txt_edad);
-        tvCorreo = findViewById(R.id.txt_correo);
-        back_button = findViewById(R.id.back_to_menu);
-
-        back_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentMenu = new Intent(PerfilActivity.this, MenuActivity.class);
-                PerfilActivity.this.startActivity(intentMenu);
-            }
-        });
+        tvNombre = findViewById(R.id.texto_nombre);
+        tvEdad = findViewById(R.id.texto_edad);
+        tvCorreo = findViewById(R.id.texto_correo);
 
 
-        Intent intent = getIntent();
-        String name = intent.getStringExtra("name");
-        Integer edad = intent.getIntExtra("age",-1);
-        String correo = intent.getStringExtra("correo");
 
-        tvNombre.setText(name);
-        tvEdad.setText(edad.toString());
-        tvCorreo.setText(correo);
-        }
+
+
+    }
     }
 
