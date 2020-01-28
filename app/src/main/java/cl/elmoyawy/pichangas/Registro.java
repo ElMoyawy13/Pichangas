@@ -17,11 +17,13 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class Registro extends AppCompatActivity implements View.OnClickListener {
-    EditText etnombre, etusuario, etpassword, etedad, etcorreo;
+    EditText etnombre, etusuario, etpassword, etpassword2, etedad, etcorreo;
     Button btn_registrar;
+    ImageView back_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,12 +32,23 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         etnombre = findViewById(R.id.reg_nombre);
         etusuario = findViewById(R.id.reg_user);
         etpassword = findViewById(R.id.reg_pass);
+        etpassword2 = findViewById(R.id.reg_pass_confirmation);
         etedad = findViewById(R.id.reg_edad);
         etcorreo = findViewById(R.id.reg_correo);
 
         btn_registrar = findViewById(R.id.btn_reg);
 
         btn_registrar.setOnClickListener(this);
+
+        back_button = findViewById(R.id.back_to_menu);
+
+        back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentMenu = new Intent(Registro.this, MainActivity.class);
+                Registro.this.startActivity(intentMenu);
+            }
+        });
     }
 
     @Override
@@ -59,6 +72,12 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                     Toast.LENGTH_LONG).show();
             return;
         }
+        if(!password.equals(etpassword2.getText().toString())) {
+            Toast.makeText(this, (String)"Las contraseñas no coinciden",
+                    Toast.LENGTH_LONG).show();
+            return;
+        }
+
         if(etedad.getText().toString().equals("")) {
             Toast.makeText(this, (String)"Debes ingresar una edad",
                     Toast.LENGTH_LONG).show();

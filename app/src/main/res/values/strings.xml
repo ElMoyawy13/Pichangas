@@ -13,7 +13,11 @@
     <string name="edadUser">Edad:</string>
     <string name="usuarioUser">Usuario:</string>
     <string name="passUser">Contraseña:</string>
+    <string name="pass_confirmation">Confirme ontraseña</string>
     <string name="correoUser">Correo:</string>
+    <string name="old_pass">Contraseña actual</string>
+    <string name="new_pass">Nueva contraseña</string>
+    <string name="new_pass_confirmation">Confirmar contraseña</string>
 
     <string name="pichangas">Pichangas</string>
     <string name="amigos">Amigos</string>
@@ -22,4 +26,6 @@
 
     <string name="returnDescription">Volver al menú principal</string>
     <string name="userDescription">Ver mi perfil</string>
+    <string name="nuevaPichanga">Nueva Pichanga</string>
+    <string name="description">Descripción</string>
 </resources>
