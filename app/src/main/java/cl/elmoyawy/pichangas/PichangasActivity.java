@@ -7,7 +7,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.sql.Array;
 
@@ -50,15 +58,38 @@ public class PichangasActivity extends AppCompatActivity {
             }
         });
 
-        /*Obtener las pichangas desde el servidor.*/
-        /*pichangas = new Array;*/
-        for(Integer i = 0; i < 3; i++) {
-            Button myButton = new Button(this);
-            myButton.setLayoutParams(new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT));
-            myButton.setText("Pichanga"+i.toString());
-            layout_pichangas.addView(myButton);
-        }
+        Response.Listener<String> responseListener = new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonOResponse = new JSONObject(response);
+                    boolean success = jsonOResponse.getBoolean("success");
+                    if (success){
+                        int pichangasQuantity = jsonOResponse.getJSONArray("pichangas").length();
+                        for(Integer i = 0; i < pichangasQuantity; i++) {
+                            JSONObject pichanga = (JSONObject) jsonOResponse.getJSONArray("pichangas").get(i);
+                            Button myButton = new Button(PichangasActivity.this);
+                            myButton.setLayoutParams(new LinearLayout.LayoutParams(
+                                    LinearLayout.LayoutParams.MATCH_PARENT,
+                                    LinearLayout.LayoutParams.WRAP_CONTENT));
+                            myButton.setText(pichanga.get("name").toString());
+                            layout_pichangas.addView(myButton);
+                        }
+
+                    }else{
+                        AlertDialog.Builder builder = new AlertDialog.Builder(PichangasActivity.this);
+                        builder.setMessage("Error del servidor")
+                                .setNegativeButton("Retry",null)
+                                .create().show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        };
+        PichangasRequest pichangasRequest = new PichangasRequest(responseListener);
+        RequestQueue queue = Volley.newRequestQueue(PichangasActivity.this);
+        queue.add(pichangasRequest);
     }
 }
