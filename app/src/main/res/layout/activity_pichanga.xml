@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Registro"
+    android:background="@color/colorFondo">
+
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorFondo">
+
+        <ImageView
+            android:id="@+id/back_to_menu"
+            android:contentDescription="@string/returnDescription"
+            android:layout_height="48dp"
+            android:layout_width="48dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <LinearLayout
+            android:layout_height="48dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/profile_button"
+            android:contentDescription="@string/userDescription"
+            android:layout_gravity="end"
+            android:layout_height="48dp"
+            android:layout_width="48dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_account_circle_black_24dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Nombre de Pichanga"
+        android:layout_gravity="center"
+        android:textSize="25sp"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:id="@+id/place_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/place"
+        android:textColor="@color/explainText"
+        />
+
+    <TextView
+        android:id="@+id/place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/place"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:id="@+id/date_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/date"
+        android:textColor="@color/explainText"
+        />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/date"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:id="@+id/description_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/description"
+        android:textColor="@color/explainText"
+        />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/description"
+        android:textColor="#000000"
+        />
+    <LinearLayout
+        android:id="@+id/friendsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorFondo"
+        android:gravity="center_horizontal"
+        android:paddingTop="12dp">
+
+        <LinearLayout
+            android:id="@+id/friend1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorFondo"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/friend1Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:layout_gravity="center"
+                android:textColor="@color/colorBlanco"
+                android:background="@drawable/secondary_button"
+                />
+            <Button
+                android:id="@+id/friend1Uninvite"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:text="@string/uninvite"
+                android:layout_gravity="center"
+                android:layout_marginStart="24dp"
+                android:textColor="@color/colorBlanco"
+                android:background="@drawable/quit_button"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/inviteFriend"
+        android:layout_gravity="center"
+        android:textColor="@color/colorBlanco"
+        android:background="@drawable/secondary_button"
+        />
+
+</LinearLayout>

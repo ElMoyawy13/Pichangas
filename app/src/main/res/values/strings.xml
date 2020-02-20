@@ -30,4 +30,9 @@
     <string name="nuevaPichanga">Nueva Pichanga</string>
     <string name="description">Descripción</string>
     <string name="addPichanga">Crear Pichanga</string>
+
+    <string name="place">Lugar</string>
+    <string name="date">Fecha y hora</string>
+    <string name="inviteFriend">Invitar amigo</string>
+    <string name="uninvite">X</string>
 </resources>
