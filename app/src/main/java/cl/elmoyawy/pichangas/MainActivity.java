@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intentRegistrar = new Intent(MainActivity.this, Registro.class);
                 MainActivity.this.startActivity(intentRegistrar);
+                MainActivity.this.finish();
             }
         });
 
@@ -88,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                                 MainActivity.this.startActivity(intent);
+                                MainActivity.this.finish();
 
                             }else{
                                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);

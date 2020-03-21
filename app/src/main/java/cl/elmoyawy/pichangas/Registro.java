@@ -98,8 +98,9 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                     boolean success = jsonResponse.getBoolean("success");
 
                     if (success){
-                        Intent intent = new Intent(Registro.this, MainActivity.class);
+                        Intent intent = new Intent(Registro.this, MenuActivity.class);
                         Registro.this.startActivity(intent);
+                        Registro.this.finish();
                     }else {
                         AlertDialog.Builder builder = new AlertDialog.Builder(Registro.this);
                         builder.setMessage("Error de Registro")
@@ -120,5 +121,11 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         Toast.makeText(this, (String)"Registrándote...",
                 Toast.LENGTH_LONG).show();
 
+    }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(Registro.this, MainActivity.class);
+        Registro.this.startActivity(intent);
+        super.onBackPressed();
     }
 }
