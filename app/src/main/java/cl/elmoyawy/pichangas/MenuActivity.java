@@ -2,6 +2,7 @@ package cl.elmoyawy.pichangas;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -26,6 +27,15 @@ public class MenuActivity extends Activity {
         btn_invitaciones = findViewById(R.id.btn_invitaciones);
         btn_estadisticas = findViewById(R.id.btn_estadisticas);
         btn_perfil = findViewById(R.id.btn_perfil);
+
+
+        Intent intent = getIntent();
+        final String name = intent.getStringExtra("name");
+        final String correo = intent.getStringExtra("correo");
+        final String password = intent.getStringExtra("password");
+
+
+
 
         btn_pichangas.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,8 +72,12 @@ public class MenuActivity extends Activity {
         btn_perfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentPerfil = new Intent(MenuActivity.this, PerfilActivity.class);
-                MenuActivity.this.startActivity(intentPerfil);
+                Intent intent = new Intent(MenuActivity.this, PerfilActivity.class);
+                intent.putExtra("name", name);
+                intent.putExtra("correo", correo);
+                intent.putExtra("password", password);
+                MenuActivity.this.startActivity(intent);
+                MenuActivity.this.finish();
             }
         });
 

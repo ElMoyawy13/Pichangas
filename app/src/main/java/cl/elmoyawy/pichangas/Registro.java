@@ -66,7 +66,7 @@ public class Registro extends Activity implements View.OnClickListener {
                     Toast.LENGTH_LONG).show();
             return;
         }
-        Response.Listener<String> respoListener = new Response.Listener<String>() {
+        Response.Listener<String> responseListener = new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
@@ -75,6 +75,9 @@ public class Registro extends Activity implements View.OnClickListener {
 
                     if (success){
                         Intent intent = new Intent(Registro.this, MenuActivity.class);
+                        intent.putExtra("name", name);
+                        intent.putExtra("correo", correo);
+                        intent.putExtra("password", password);
                         Registro.this.startActivity(intent);
                         Registro.this.finish();
                     }else {
@@ -90,7 +93,7 @@ public class Registro extends Activity implements View.OnClickListener {
             }
         };
 
-        RegisterRequest registerRequest = new RegisterRequest(name, password, correo, respoListener);
+        RegisterRequest registerRequest = new RegisterRequest(name, password, correo, responseListener);
         RequestQueue queue = Volley.newRequestQueue(Registro.this);
         queue.add(registerRequest);
 
