@@ -6,9 +6,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
 
-public class MenuActivity extends AppCompatActivity {
+public class MenuActivity extends Activity {
 
     Button btn_pichangas;
     Button btn_amigos;

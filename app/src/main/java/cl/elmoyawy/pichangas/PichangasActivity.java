@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -19,7 +19,7 @@ import org.json.JSONObject;
 
 import java.sql.Array;
 
-public class PichangasActivity extends AppCompatActivity {
+public class PichangasActivity extends Activity {
     Button nueva_pichanga;
     LinearLayout layout_pichangas;
     Array pichangas;

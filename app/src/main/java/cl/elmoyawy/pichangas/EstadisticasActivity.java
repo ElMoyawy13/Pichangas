@@ -7,11 +7,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
 
 import java.sql.Array;
 
-public class EstadisticasActivity extends AppCompatActivity {
+public class EstadisticasActivity extends Activity {
     ImageView back_button, profile_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

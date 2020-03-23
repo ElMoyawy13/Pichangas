@@ -5,9 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
 
-public class NewPichangaActivity extends AppCompatActivity {
+public class NewPichangaActivity extends Activity {
     ImageView back_button, profile_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

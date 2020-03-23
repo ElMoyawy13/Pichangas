@@ -7,11 +7,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
 
 import java.sql.Array;
 
-public class AmigosActivity extends AppCompatActivity {
+public class AmigosActivity extends Activity {
     ImageView back_button, profile_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

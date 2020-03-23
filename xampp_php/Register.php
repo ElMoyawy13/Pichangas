@@ -5,8 +5,9 @@
     $age = $_POST["age"];
     $username = $_POST["username"];
     $password = $_POST["password"];
-    $statement = mysqli_prepare($con, "INSERT INTO usuario (name, username, password) VALUES (?, ?, ?)");
-    mysqli_stmt_bind_param($statement, "sss", $name, $username, $password);
+    $email = $_POST["correo"];
+    $statement = mysqli_prepare($con, "INSERT INTO usuario (name, username, password, correo) VALUES (?, ?, ?, ?)");
+    mysqli_stmt_bind_param($statement, "ssss", $name, $username, $password, $email);
     mysqli_stmt_execute($statement);
     
     $response = array();

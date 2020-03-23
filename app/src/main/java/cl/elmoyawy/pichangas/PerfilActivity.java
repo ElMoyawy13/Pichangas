@@ -8,11 +8,11 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
 
 import java.sql.Array;
 
-public class PerfilActivity extends AppCompatActivity {
+public class PerfilActivity extends Activity {
     TextView tvNombre, tvEdad, tvCorreo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

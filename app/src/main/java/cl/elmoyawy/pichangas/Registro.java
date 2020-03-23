@@ -1,7 +1,7 @@
 package cl.elmoyawy.pichangas;
 
-import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,7 +20,7 @@ import org.json.JSONObject;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-public class Registro extends AppCompatActivity implements View.OnClickListener {
+public class Registro extends Activity implements View.OnClickListener {
     EditText etnombre, etusuario, etpassword, etpassword2, etedad, etcorreo;
     Button btn_registrar;
     ImageView back_button;

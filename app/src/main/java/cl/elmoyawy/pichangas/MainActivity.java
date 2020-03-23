@@ -1,7 +1,8 @@
 package cl.elmoyawy.pichangas;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.Activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,7 +12,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -23,7 +23,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     EditText et_usuario;
     EditText et_password;
@@ -70,24 +70,19 @@ public class MainActivity extends AppCompatActivity {
                             boolean success = jsonOResponse.getBoolean("success");
                             if (success){
                                 String name = jsonOResponse.getString("name");
-                                int edad = jsonOResponse.getInt("age");
                                 if(jsonOResponse.getString("username") == username) {
-                                    String correo = jsonOResponse.getString("correo");
+                                    //String correo = jsonOResponse.getString("correo");
                                 }else {
                                     String username = jsonOResponse.getString("username");
                                 }
                                 Intent intent = new Intent(MainActivity.this, MenuActivity.class);
                                 intent.putExtra("name", name);
                                 intent.putExtra("username", username);
-                                intent.putExtra("age", edad);
-                                intent.putExtra("correo", correo);
+                                //intent.putExtra("correo", correo);
                                 intent.putExtra("password", password);
 
                                 datos_user.add(name);
                                 datos_user.add(correo);
-                                datos_user.add(edad);
-
-
                                 MainActivity.this.startActivity(intent);
                                 MainActivity.this.finish();
 
