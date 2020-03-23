@@ -25,7 +25,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginLeft="60dp"
         android:layout_marginRight="60dp"
-        android:hint="@string/user"
+        android:hint="@string/correo"
         android:background="@drawable/rounded_edittext"
         android:alpha="0.9"
         android:inputType="text"

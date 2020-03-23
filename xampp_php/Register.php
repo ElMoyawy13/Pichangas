@@ -2,12 +2,10 @@
     $con = mysqli_connect("localhost", "root", "", "pichangas");
     
     $name = $_POST["name"];
-    $age = $_POST["age"];
-    $username = $_POST["username"];
     $password = $_POST["password"];
     $email = $_POST["correo"];
-    $statement = mysqli_prepare($con, "INSERT INTO usuario (name, username, password, correo) VALUES (?, ?, ?, ?)");
-    mysqli_stmt_bind_param($statement, "ssss", $name, $username, $password, $email);
+    $statement = mysqli_prepare($con, "INSERT INTO usuario (name, password, correo) VALUES (?, ?, ?)");
+    mysqli_stmt_bind_param($statement, "sss", $name, $password, $email);
     mysqli_stmt_execute($statement);
     
     $response = array();

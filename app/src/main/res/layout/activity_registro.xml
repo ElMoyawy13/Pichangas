@@ -8,19 +8,10 @@
     tools:context=".Registro"
     android:background="@color/colorFondo">
 
-    <ImageView
-        android:id="@+id/back_to_menu"
-        android:contentDescription="@string/returnDescription"
-        android:layout_height="48dp"
-        android:layout_width="48dp"
-        android:layout_gravity="start"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/ic_arrow_back_black_24dp" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="72dp"
         android:text="@string/registroUser"
         android:layout_gravity="center"
         android:textSize="25sp"
@@ -42,23 +33,6 @@
         android:textColor="@color/colorBlanco"
         android:hint="@string/nombreUser"
         />
-
-    <EditText
-        android:id="@+id/reg_user"
-        android:inputType="text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:padding="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginRight="80dp"
-        android:layout_gravity="center"
-        android:background="@drawable/third_button"
-        android:textColor="@color/colorBlanco"
-        android:hint="@string/user"
-        />
-
 
     <EditText
         android:id="@+id/reg_pass"
@@ -90,22 +64,6 @@
         android:background="@drawable/third_button"
         android:textColor="@color/colorBlanco"
         android:hint="@string/pass_confirmation"
-        />
-
-    <EditText
-        android:id="@+id/reg_edad"
-        android:inputType="number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:padding="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginRight="80dp"
-        android:layout_gravity="center"
-        android:background="@drawable/third_button"
-        android:textColor="@color/colorBlanco"
-        android:hint="@string/edadUser"
         />
 
     <EditText

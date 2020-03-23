@@ -30,25 +30,14 @@ public class Registro extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_registro);
 
         etnombre = findViewById(R.id.reg_nombre);
-        etusuario = findViewById(R.id.reg_user);
         etpassword = findViewById(R.id.reg_pass);
         etpassword2 = findViewById(R.id.reg_pass_confirmation);
-        etedad = findViewById(R.id.reg_edad);
         etcorreo = findViewById(R.id.reg_correo);
 
         btn_registrar = findViewById(R.id.btn_reg);
 
         btn_registrar.setOnClickListener(this);
 
-        back_button = findViewById(R.id.back_to_menu);
-
-        back_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentMenu = new Intent(Registro.this, MainActivity.class);
-                Registro.this.startActivity(intentMenu);
-            }
-        });
     }
 
     @Override
@@ -57,12 +46,6 @@ public class Registro extends Activity implements View.OnClickListener {
         final String name = etnombre.getText().toString();
         if(name.equals("")) {
             Toast.makeText(this, (String)"Debes ingresar un nombre",
-                    Toast.LENGTH_LONG).show();
-            return;
-        }
-        final String username = etusuario.getText().toString();
-        if(username.equals("")) {
-            Toast.makeText(this, (String)"Debes ingresar un nombre de usuario",
                     Toast.LENGTH_LONG).show();
             return;
         }
@@ -77,13 +60,6 @@ public class Registro extends Activity implements View.OnClickListener {
                     Toast.LENGTH_LONG).show();
             return;
         }
-
-        if(etedad.getText().toString().equals("")) {
-            Toast.makeText(this, (String)"Debes ingresar una edad",
-                    Toast.LENGTH_LONG).show();
-            return;
-        }
-        final int age = Integer.parseInt(etedad.getText().toString());
         final String correo = etcorreo.getText().toString();
         if(correo.equals("")) {
             Toast.makeText(this, (String)"Debes ingresar un correo",
@@ -114,12 +90,12 @@ public class Registro extends Activity implements View.OnClickListener {
             }
         };
 
-        RegisterRequest registerRequest = new RegisterRequest(name, username, age, password, correo, respoListener);
+        RegisterRequest registerRequest = new RegisterRequest(name, password, correo, respoListener);
         RequestQueue queue = Volley.newRequestQueue(Registro.this);
         queue.add(registerRequest);
 
         Toast.makeText(this, (String)"Registrándote...",
-                Toast.LENGTH_LONG).show();
+                Toast.LENGTH_SHORT).show();
 
     }
     @Override

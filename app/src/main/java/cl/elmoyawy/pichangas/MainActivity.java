@@ -25,9 +25,8 @@ import java.util.List;
 
 public class MainActivity extends Activity {
 
-    EditText et_usuario;
-    EditText et_password;
     EditText et_correo;
+    EditText et_password;
     Button btn_log;
     Button tv_registrar;
 
@@ -39,7 +38,6 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         tv_registrar = findViewById(R.id.txt_registrar);
-        et_usuario = findViewById(R.id.txt_user);
         et_password = findViewById(R.id.txt_pass);
         et_correo = findViewById(R.id.txt_user);
 
@@ -58,9 +56,8 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                final String username = et_usuario.getText().toString();
-                final String password = et_password.getText().toString();
                 final String correo = et_correo.getText().toString();
+                final String password = et_password.getText().toString();
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
@@ -70,15 +67,10 @@ public class MainActivity extends Activity {
                             boolean success = jsonOResponse.getBoolean("success");
                             if (success){
                                 String name = jsonOResponse.getString("name");
-                                if(jsonOResponse.getString("username") == username) {
-                                    //String correo = jsonOResponse.getString("correo");
-                                }else {
-                                    String username = jsonOResponse.getString("username");
-                                }
+
                                 Intent intent = new Intent(MainActivity.this, MenuActivity.class);
                                 intent.putExtra("name", name);
-                                intent.putExtra("username", username);
-                                //intent.putExtra("correo", correo);
+                                intent.putExtra("correo", correo);
                                 intent.putExtra("password", password);
 
                                 datos_user.add(name);
@@ -98,7 +90,7 @@ public class MainActivity extends Activity {
 
                     }
                 };
-                LoginRequest loginRequest = new LoginRequest(username, password, responseListener);
+                LoginRequest loginRequest = new LoginRequest(correo, password, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(MainActivity.this);
                 queue.add(loginRequest);
 
