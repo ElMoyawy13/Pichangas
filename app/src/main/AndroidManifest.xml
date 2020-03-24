@@ -26,7 +26,7 @@
         <activity android:name=".InvitacionesActivity"/>
         <activity android:name=".PerfilActivity"/>
         <activity android:name=".NewPichangaActivity"/>
-        <activity android:name="RegisterRequest"/>
+        <activity android:name="NewAmigoActivity"/>
     </application>
 
 </manifest>

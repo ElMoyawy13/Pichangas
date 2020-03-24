@@ -5,7 +5,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,13 +16,11 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.widget.ImageView;
 import android.widget.Toast;
 
 public class Registro extends Activity implements View.OnClickListener {
-    EditText etnombre, etusuario, etpassword, etpassword2, etedad, etcorreo;
+    EditText etnombre, etpassword, etpassword2, etcorreo;
     Button btn_registrar;
-    ImageView back_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

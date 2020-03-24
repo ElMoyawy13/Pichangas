@@ -14,7 +14,10 @@ import android.app.Activity;
 import java.sql.Array;
 
 public class PerfilActivity extends Activity {
-    TextView tvNombre, tvEdad, tvCorreo;
+    TextView tvNombre, tvCorreo;
+    String name = "";
+    String correo = "";
+    String password = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,14 +27,22 @@ public class PerfilActivity extends Activity {
         tvCorreo = findViewById(R.id.texto_correo);
 
         Intent intent = getIntent();
-        final String name = intent.getStringExtra("name");
-        final String correo = intent.getStringExtra("correo");
-        final String password = intent.getStringExtra("password");
+        name = intent.getStringExtra("name");
+        correo = intent.getStringExtra("correo");
+        password = intent.getStringExtra("password");
 
         tvNombre.setText(name);
         tvCorreo.setText(correo);
-
-
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(PerfilActivity.this, MenuActivity.class);
+        intent.putExtra("name", name);
+        intent.putExtra("correo", correo);
+        intent.putExtra("password", password);
+        PerfilActivity.this.startActivity(intent);
+        super.onBackPressed();
     }
+}
 

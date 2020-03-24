@@ -35,4 +35,7 @@
     <string name="date">Fecha y hora</string>
     <string name="inviteFriend">Invitar amigo</string>
     <string name="uninvite">X</string>
+
+    <string name="newFriend">Nuevo amigo</string>
+    <string name="addFriend">Añadir amigo</string>
 </resources>

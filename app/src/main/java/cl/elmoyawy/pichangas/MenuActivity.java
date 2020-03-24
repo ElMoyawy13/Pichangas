@@ -49,7 +49,11 @@ public class MenuActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intentAmigos = new Intent(MenuActivity.this, AmigosActivity.class);
+                intentAmigos.putExtra("name", name);
+                intentAmigos.putExtra("correo", correo);
+                intentAmigos.putExtra("password", password);
                 MenuActivity.this.startActivity(intentAmigos);
+                MenuActivity.this.finish();
             }
         });
 
