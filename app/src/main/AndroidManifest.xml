@@ -25,6 +25,7 @@
         <activity android:name=".EstadisticasActivity"/>
         <activity android:name=".InvitacionesActivity"/>
         <activity android:name=".PerfilActivity"/>
+        <activity android:name=".PerfilAmigoActivity"/>
         <activity android:name=".NewPichangaActivity"/>
         <activity android:name="NewAmigoActivity"/>
     </application>

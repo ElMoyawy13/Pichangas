@@ -55,9 +55,32 @@ $response["indice"] = $indice;
             array_push($friends, $amigo);
         }
     }
+
+    $requests = array();
+
+    $statement = mysqli_prepare($con, "SELECT sujeto FROM amistad WHERE amigo = ? AND aceptado = 0");
+    mysqli_stmt_bind_param($statement, "i", $indice);
+    mysqli_stmt_execute($statement);
+    mysqli_stmt_store_result($statement);
+    mysqli_stmt_bind_result($statement, $amigo);    
+
+    while(mysqli_stmt_fetch($statement)){
+        $statement2 = mysqli_prepare($con, "SELECT name, correo FROM usuario WHERE indice = ?");
+        mysqli_stmt_bind_param($statement2, "i", $amigo);
+        mysqli_stmt_execute($statement2);
+        mysqli_stmt_store_result($statement2);
+        mysqli_stmt_bind_result($statement2, $name, $correo);
+        while(mysqli_stmt_fetch($statement2)) {
+            $amigo = array();
+            $amigo["name"] = $name;
+            $amigo["correo"] = $correo;
+            array_push($requests, $amigo);
+        }
+    }
     
     $response["success"] = true;  
     $response["friends"] = $friends;
+    $response["requests"] = $requests;
 
     echo json_encode($response);
 ?>

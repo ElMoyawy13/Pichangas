@@ -38,4 +38,5 @@
 
     <string name="newFriend">Nuevo amigo</string>
     <string name="addFriend">Añadir amigo</string>
+    <string name="acceptFriend">Agregar como amigo</string>
 </resources>

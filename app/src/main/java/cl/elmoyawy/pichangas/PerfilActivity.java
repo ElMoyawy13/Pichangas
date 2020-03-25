@@ -17,7 +17,6 @@ public class PerfilActivity extends Activity {
     TextView tvNombre, tvCorreo;
     String name = "";
     String correo = "";
-    String password = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +28,6 @@ public class PerfilActivity extends Activity {
         Intent intent = getIntent();
         name = intent.getStringExtra("name");
         correo = intent.getStringExtra("correo");
-        password = intent.getStringExtra("password");
 
         tvNombre.setText(name);
         tvCorreo.setText(correo);
@@ -40,7 +38,6 @@ public class PerfilActivity extends Activity {
         Intent intent = new Intent(PerfilActivity.this, MenuActivity.class);
         intent.putExtra("name", name);
         intent.putExtra("correo", correo);
-        intent.putExtra("password", password);
         PerfilActivity.this.startActivity(intent);
         super.onBackPressed();
     }
