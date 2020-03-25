@@ -8,12 +8,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PichangasRequest extends StringRequest {
-    private static final String LOGIN_REQUEST_URL = "http://192.168.1.19/PichangasList.php";
+    private static final String LOGIN_REQUEST_URL =  Database.URL + "/Get_user_pichangas.php";
     private Map<String,String> params;
-    public PichangasRequest(Response.Listener<String> listener){
+    PichangasRequest(String correo, Response.Listener<String> listener){
         super(Request.Method.POST,LOGIN_REQUEST_URL,listener,null);
         params = new HashMap<>();
-        params.put("username", "Hola");  // TODO: get the username as global variable
+        params.put("correo", correo);
     }
     @Override
     public Map<String, String> getParams() {

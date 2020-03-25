@@ -8,41 +8,12 @@
     tools:context=".Registro"
     android:background="@color/colorFondo">
 
-    <LinearLayout
-        android:id="@+id/navbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/colorFondo">
-
-        <ImageView
-            android:id="@+id/back_to_menu"
-            android:contentDescription="@string/returnDescription"
-            android:layout_height="48dp"
-            android:layout_width="48dp"
-            android:layout_gravity="start"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/ic_arrow_back_black_24dp" />
-
-        <LinearLayout
-            android:layout_height="48dp"
-            android:layout_width="0dp"
-            android:layout_weight="1"/>
-
-        <ImageView
-            android:id="@+id/profile_button"
-            android:contentDescription="@string/userDescription"
-            android:layout_gravity="end"
-            android:layout_height="48dp"
-            android:layout_width="48dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/ic_account_circle_black_24dp" />
-    </LinearLayout>
 
     <TextView
+        android:id="@+id/pichanga_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="48dp"
         android:text="Nombre de Pichanga"
         android:layout_gravity="center"
         android:textSize="25sp"
@@ -78,6 +49,24 @@
 
     <TextView
         android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/date"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:id="@+id/time_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/date"
+        android:textColor="@color/explainText"
+        />
+
+    <TextView
+        android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -122,7 +111,7 @@
                 android:id="@+id/friend1Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nombre"
+                android:text="@string/nombre"
                 android:layout_gravity="center"
                 android:textColor="@color/colorBlanco"
                 android:background="@drawable/secondary_button"

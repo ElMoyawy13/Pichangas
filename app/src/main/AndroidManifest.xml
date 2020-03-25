@@ -21,6 +21,7 @@
         </activity>
         <activity android:name=".MenuActivity" />
         <activity android:name=".PichangasActivity" />
+        <activity android:name=".PichangaActivity"/>
         <activity android:name=".AmigosActivity"/>
         <activity android:name=".EstadisticasActivity"/>
         <activity android:name=".InvitacionesActivity"/>

@@ -97,7 +97,7 @@ public class AmigosActivity extends Activity {
                             amigoCorreo = jsonOResponse.getJSONArray("requests").getJSONObject(i).getString("correo");
                             amigo.setText(amigoName);
                             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                            params.setMargins(0, 20, 0, 0);
+                            params.setMargins(24, 20, 24, 0);
                             amigo.setLayoutParams(params);
                             amigo.setBackgroundResource(R.drawable.terciary_button);
                             amigo.setPadding(10,10,10,10);
@@ -140,8 +140,8 @@ public class AmigosActivity extends Activity {
 
     @Override
     protected void onRestart() {
-        finish();
         startActivity(getIntent());
+        finish();
         super.onRestart();
     }
 

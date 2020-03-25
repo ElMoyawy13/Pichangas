@@ -35,7 +35,7 @@
         android:layout_marginTop="20dp"
         android:text="@string/newFriend"
         android:textColor="@color/colorBlanco"
-        android:background="@drawable/secondary_button"
+        android:background="@drawable/main_button"
         android:padding="10dp"
         android:layout_gravity="center"
         android:clickable="true"

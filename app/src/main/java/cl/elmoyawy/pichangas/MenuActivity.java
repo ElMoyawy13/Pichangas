@@ -41,7 +41,10 @@ public class MenuActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intentPichangas = new Intent(MenuActivity.this, PichangasActivity.class);
+                intentPichangas.putExtra("name", name);
+                intentPichangas.putExtra("correo", correo);
                 MenuActivity.this.startActivity(intentPichangas);
+                MenuActivity.this.finish();
             }
         });
 
@@ -61,7 +64,10 @@ public class MenuActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intentInvitaciones = new Intent(MenuActivity.this, InvitacionesActivity.class);
+                intentInvitaciones.putExtra("name", name);
+                intentInvitaciones.putExtra("correo", correo);
                 MenuActivity.this.startActivity(intentInvitaciones);
+                MenuActivity.this.finish();
             }
         });
 
@@ -69,7 +75,10 @@ public class MenuActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intentEstadisticas = new Intent(MenuActivity.this, EstadisticasActivity.class);
+                intentEstadisticas.putExtra("name", name);
+                intentEstadisticas.putExtra("correo", correo);
                 MenuActivity.this.startActivity(intentEstadisticas);
+                MenuActivity.this.finish();
             }
         });
 
@@ -79,7 +88,6 @@ public class MenuActivity extends Activity {
                 Intent intent = new Intent(MenuActivity.this, PerfilActivity.class);
                 intent.putExtra("name", name);
                 intent.putExtra("correo", correo);
-                intent.putExtra("password", password);
                 MenuActivity.this.startActivity(intent);
                 MenuActivity.this.finish();
             }
