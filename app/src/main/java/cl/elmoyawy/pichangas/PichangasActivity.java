@@ -47,7 +47,6 @@ public class PichangasActivity extends Activity {
                 intent.putExtra("name", name);
                 intent.putExtra("correo", correo);
                 PichangasActivity.this.startActivity(intent);
-                PichangasActivity.this.finish();
             }
         });
         Response.Listener<String> responseListener = new Response.Listener<String>() {

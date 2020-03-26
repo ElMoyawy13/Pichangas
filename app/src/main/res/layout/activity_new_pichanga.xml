@@ -8,41 +8,10 @@
     tools:context=".Registro"
     android:background="@color/colorFondo">
 
-    <LinearLayout
-        android:id="@+id/navbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/colorFondo">
-
-        <ImageView
-            android:id="@+id/back_to_menu"
-            android:contentDescription="@string/returnDescription"
-            android:layout_height="48dp"
-            android:layout_width="48dp"
-            android:layout_gravity="start"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/ic_arrow_back_black_24dp" />
-
-        <LinearLayout
-            android:layout_height="48dp"
-            android:layout_width="0dp"
-            android:layout_weight="1"/>
-
-        <ImageView
-            android:id="@+id/profile_button"
-            android:contentDescription="@string/userDescription"
-            android:layout_gravity="end"
-            android:layout_height="48dp"
-            android:layout_width="48dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/ic_account_circle_black_24dp" />
-    </LinearLayout>
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="48dp"
         android:text="@string/nuevaPichanga"
         android:layout_gravity="center"
         android:textSize="25sp"
@@ -50,7 +19,7 @@
         />
 
     <EditText
-        android:id="@+id/reg_nombre"
+        android:id="@+id/nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -59,7 +28,7 @@
         />
 
     <EditText
-        android:id="@+id/reg_descripcion"
+        android:id="@+id/descripcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/description"
@@ -67,12 +36,68 @@
         />
 
     <EditText
-        android:id="@+id/reg_edad"
+        android:id="@+id/lugar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/age"
-        android:inputType="datetime"
+        android:hint="@string/place"
+        android:inputType="text"
         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:context=".Registro"
+        android:background="@color/colorFondo">
+        <EditText
+            android:id="@+id/ano"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/year"
+            android:inputType="number"
+            android:layout_marginStart="48dp"
+            />
+        <EditText
+            android:id="@+id/mes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/month"
+            android:inputType="number"
+            android:layout_marginStart="48dp"
+            />
+        <EditText
+            android:id="@+id/dia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/day"
+            android:inputType="number"
+            android:layout_marginStart="48dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:context=".Registro">
+
+        <EditText
+            android:id="@+id/hora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/time"
+            android:inputType="number"
+            android:layout_marginStart="72dp"
+            />
+        <EditText
+            android:id="@+id/minuto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/minute"
+            android:inputType="number"
+            android:layout_marginStart="72dp"
+            />
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_reg"

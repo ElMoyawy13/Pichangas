@@ -32,7 +32,12 @@
     <string name="addPichanga">Crear Pichanga</string>
 
     <string name="place">Lugar</string>
-    <string name="date">Fecha y hora</string>
+    <string name="date">Fecha</string>
+    <string name="year">Año</string>
+    <string name="month">Mes</string>
+    <string name="day">Día</string>
+    <string name="time">Hora</string>
+    <string name="minute">Minuto</string>
     <string name="inviteFriend">Invitar amigo</string>
     <string name="uninvite">X</string>
 

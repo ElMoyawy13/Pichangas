@@ -58,8 +58,8 @@ public class PichangaActivity extends Activity {
                         title_text_view.setText(jsonResponse.getString("name"));
                         description_text_view.setText(jsonResponse.getString("description"));
                         place_text_view.setText(jsonResponse.getString("place"));
-                        date_text_view.setText(jsonResponse.getString("date"));
-                        time_text_view.setText(jsonResponse.getString("time"));
+                        date_text_view.setText(jsonResponse.getString("day") + "/" + jsonResponse.getString("month") + "/" + jsonResponse.getString("year"));
+                        time_text_view.setText(jsonResponse.getString("hour") + ":" + jsonResponse.getString("minute"));
                         for(int i = 0; i < jsonResponse.getJSONArray("participants").length(); i++) {
                             player = jsonResponse.getJSONArray("participants").getJSONObject(i);
                             Button amigo = new Button(PichangaActivity.this);

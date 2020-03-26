@@ -140,8 +140,8 @@ public class AmigosActivity extends Activity {
 
     @Override
     protected void onRestart() {
-        startActivity(getIntent());
         finish();
+        startActivity(getIntent());
         super.onRestart();
     }
 

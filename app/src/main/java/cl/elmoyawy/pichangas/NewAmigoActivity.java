@@ -58,6 +58,8 @@ public class NewAmigoActivity extends Activity implements View.OnClickListener {
                         Toast.makeText(NewAmigoActivity.this, "¡Nuevo amigo añadido!",
                                 Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(NewAmigoActivity.this, AmigosActivity.class);
+                        intent.putExtra("name", name);
+                        intent.putExtra("correo", correo);
                         NewAmigoActivity.this.startActivity(intent);
                         NewAmigoActivity.this.finish();
                     }
