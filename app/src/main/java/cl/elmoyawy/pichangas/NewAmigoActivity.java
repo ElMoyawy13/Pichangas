@@ -76,6 +76,7 @@ public class NewAmigoActivity extends Activity implements View.OnClickListener {
 
         Toast.makeText(this, "Enviando solicitud...",
                 Toast.LENGTH_SHORT).show();
+
     }
 
         @Override

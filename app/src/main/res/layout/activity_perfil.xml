@@ -9,6 +9,15 @@
     android:background="@color/colorFondo"
     tools:context=".Usuario">
 
+    <ImageView
+        android:id="@+id/btn_perfil"
+        android:layout_height="48dp"
+        android:layout_width="48dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="354dp"
+        android:src="@drawable/ic_account_circle_red_24dp" />
+
     <LinearLayout
         android:id="@+id/layout_datos"
         android:layout_width="match_parent"

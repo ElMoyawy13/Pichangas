@@ -12,29 +12,23 @@ import android.app.Activity;
 import java.sql.Array;
 
 public class EstadisticasActivity extends Activity {
-    ImageView back_button, profile_button;
+    String name = "";
+    String correo = "";
+    ImageView back_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Intent intent = getIntent();
+        name = intent.getStringExtra("name");
+        correo = intent.getStringExtra("correo");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_estadisticas);
 
-        back_button = findViewById(R.id.back_to_menu);
-        profile_button = findViewById(R.id.profile_button);
-
-        back_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentProfile = new Intent(EstadisticasActivity.this, MenuActivity.class);
-                EstadisticasActivity.this.startActivity(intentProfile);
-            }
-        });
-
-        profile_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentProfile = new Intent(EstadisticasActivity.this, PerfilActivity.class);
-                EstadisticasActivity.this.startActivity(intentProfile);
-            }
-        });
+    }
+    public void onBackPressed() {
+        Intent intent = new Intent(EstadisticasActivity.this, MenuActivity.class);
+        intent.putExtra("name", name);
+        intent.putExtra("correo", correo);
+        EstadisticasActivity.this.startActivity(intent);
+        super.onBackPressed();
     }
 }

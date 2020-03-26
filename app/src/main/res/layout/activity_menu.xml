@@ -9,7 +9,6 @@
     tools:context=".MenuActivity">
 
     <ImageView
-
         android:id="@+id/btn_perfil"
         android:layout_height="48dp"
         android:layout_width="48dp"

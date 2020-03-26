@@ -12,29 +12,24 @@ import android.app.Activity;
 import java.sql.Array;
 
 public class InvitacionesActivity extends Activity {
-    ImageView back_button, profile_button;
+    ImageView back_button;
+    String name = "";
+    String correo = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Intent intent = getIntent();
+        name = intent.getStringExtra("name");
+        correo = intent.getStringExtra("correo");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_invitaciones);
 
-        back_button = findViewById(R.id.back_to_menu);
-        profile_button = findViewById(R.id.profile_button);
 
-        back_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentProfile = new Intent(InvitacionesActivity.this, MenuActivity.class);
-                InvitacionesActivity.this.startActivity(intentProfile);
-            }
-        });
-
-        profile_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentProfile = new Intent(InvitacionesActivity.this, PerfilActivity.class);
-                InvitacionesActivity.this.startActivity(intentProfile);
-            }
-        });
+    }
+    public void onBackPressed() {
+        Intent intent = new Intent(InvitacionesActivity.this, MenuActivity.class);
+        intent.putExtra("name", name);
+        intent.putExtra("correo", correo);
+        InvitacionesActivity.this.startActivity(intent);
+        super.onBackPressed();
     }
 }

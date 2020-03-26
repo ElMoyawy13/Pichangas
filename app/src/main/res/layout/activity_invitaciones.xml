@@ -16,28 +16,12 @@
         android:orientation="horizontal"
         android:background="@color/colorFondo">
 
-        <ImageView
-            android:id="@+id/back_to_menu"
-            android:contentDescription="@string/returnDescription"
-            android:layout_height="48dp"
-            android:layout_width="48dp"
-            android:layout_gravity="start"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/ic_arrow_back_black_24dp" />
 
         <LinearLayout
             android:layout_height="48dp"
             android:layout_width="0dp"
             android:layout_weight="1"/>
 
-        <ImageView
-            android:id="@+id/profile_button"
-            android:contentDescription="@string/userDescription"
-            android:layout_gravity="end"
-            android:layout_height="48dp"
-            android:layout_width="48dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/ic_account_circle_black_24dp" />
     </LinearLayout>
 
     <LinearLayout

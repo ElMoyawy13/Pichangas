@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_index_round"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".Usuario"></activity>
         <activity android:name=".Registro" />
         <activity android:name=".MainActivity">
@@ -27,8 +27,8 @@
         <activity android:name=".InvitacionesActivity"/>
         <activity android:name=".PerfilActivity"/>
         <activity android:name=".PerfilAmigoActivity"/>
-        <activity android:name=".NewPichangaActivity"/>
         <activity android:name="NewAmigoActivity"/>
+        <activity android:name=".NewPichangaActivity"/>
     </application>
 
 </manifest>
