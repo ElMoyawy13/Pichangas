@@ -3,11 +3,11 @@
     
     $ID = $_POST["ID"];
     
-    $statement = mysqli_prepare($con, "SELECT nombre, descripcion, lugar, fecha, hora, dueno FROM pichanga WHERE indice = ?");
+    $statement = mysqli_prepare($con, "SELECT nombre, descripcion, lugar, year, month, day, hour, minute, dueno FROM pichanga WHERE indice = ?");
     mysqli_stmt_bind_param($statement, "i", $ID);
     mysqli_stmt_execute($statement);
     mysqli_stmt_store_result($statement);
-    mysqli_stmt_bind_result($statement, $name, $description, $place, $date, $time, $owner);
+    mysqli_stmt_bind_result($statement, $name, $description, $place, $year, $month, $day, $hour, $minute, $owner);
     
     $response = array();
     $response["success"] = false;  
@@ -17,8 +17,11 @@
         $response["name"] = $name;
         $response["description"] = $description;
         $response["place"] = $place;
-        $response["date"] = $date;
-        $response["time"] = $time;
+        $response["year"]  = $year;
+        $response["month"] = $month;
+        $response["day"] = $day;
+        $response["hour"] = $hour;
+        $response["minute"] = $minute;
         $response["owner"] = $owner;
         
         $participants = array();

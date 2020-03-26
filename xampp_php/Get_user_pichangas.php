@@ -23,16 +23,15 @@
     $pichangas = array();
 
     while(mysqli_stmt_fetch($statement)){
-        $statement2 = mysqli_prepare($con, "SELECT indice, nombre, fecha FROM pichanga WHERE indice = ?");
+        $statement2 = mysqli_prepare($con, "SELECT indice, nombre FROM pichanga WHERE indice = ?");
         mysqli_stmt_bind_param($statement2, "i", $participacion);
         mysqli_stmt_execute($statement2);
         mysqli_stmt_store_result($statement2);
-        mysqli_stmt_bind_result($statement2, $pichangaIndex, $pichangaName, $pichangaDate);
+        mysqli_stmt_bind_result($statement2, $pichangaIndex, $pichangaName);
         while(mysqli_stmt_fetch($statement2)) {
             $match = array();
             $match["id"] = $pichangaIndex;
             $match["name"] = $pichangaName;
-            $match["date"] = $pichangaDate;
             array_push($pichangas, $match);
         }
     }
