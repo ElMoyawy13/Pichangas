@@ -134,7 +134,6 @@ public class MainActivity extends Activity {
             intent.putExtra("name", name);
             intent.putExtra("correo", user);
             intent.putExtra("password", pass);
-            Log.d("TAG", name);
 
 
             LoginRequest loginRequest = new LoginRequest(user, pass);

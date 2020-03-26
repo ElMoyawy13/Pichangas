@@ -3,6 +3,7 @@ package cl.elmoyawy.pichangas;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewManager;
 import android.widget.Button;
@@ -83,6 +84,7 @@ public class PichangasActivity extends Activity {
                                     PichangasActivity.this.startActivity(intent);
                                 }
                             });
+                            Log.d("lista", String.valueOf(pichanga));
                             pichangasList.addView(pichanga);
                         }
 

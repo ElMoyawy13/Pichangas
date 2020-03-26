@@ -3,6 +3,7 @@ package cl.elmoyawy.pichangas;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -53,7 +54,6 @@ public class NewAmigoActivity extends Activity implements View.OnClickListener {
                 try {
                     JSONObject jsonResponse = new JSONObject(response);
                     boolean success = jsonResponse.getBoolean("success");
-
                     if (success){
                         Toast.makeText(NewAmigoActivity.this, "¡Nuevo amigo añadido!",
                                 Toast.LENGTH_LONG).show();
